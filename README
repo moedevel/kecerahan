@@ -1,0 +1,24 @@
+kecerahan
+==========
+
+kontrol kecerahan layar dengan cli
+
+=========
+### pemasangan
+$ sudo make clean install
+
+### penggunaan
+$ sudo kecerahan x     # x = adalah level kecerahan {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+atau
+$ sudo kecerahan +     # menambah kecerahan 1 level
+
+atau
+$ sudo kecerahan -     # menguragi kecerahan 1 level
+
+*catatan: edit terlebih dahulu kecerahan.c
+
+=========
+Author:
+ - iqbal rifai (iqbalrifai@waifu.club)
+ - archaes sima (archaes.sima@gmail.com)
