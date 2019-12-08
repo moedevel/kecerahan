@@ -32,7 +32,8 @@ int main(int argc, char *argv[]) {
 	FILE *fp; /* fp = file pointer */
 	int br_val;
 
-	if ((fp = fopen("/sys/class/backlight/nv_backlight/brightness", "r")) == NULL) {
+	/* silahkan edit 'DEVICES' dan sesuaikan dengan devices yang kalian punya */
+	if ((fp = fopen("/sys/class/backlight/DEVICES/brightness", "r")) == NULL) {
 		printf("kecerahan: Tidak dapat membuka file.\n");
 		return 1;
 	} else {
@@ -45,8 +46,9 @@ int main(int argc, char *argv[]) {
 		} else if (br_new < 0) {
 			printf("kecerah: dalam minimal.\n");
 		}
-
-		if ((fp = fopen("/sys/class/backlight/nv_backlight/brightness", "w")) == NULL) {
+		
+		/* silahkan edit 'DEVICES' dan sesuaikan dengan devices yang kalian punya */
+		if ((fp = fopen("/sys/class/backlight/DEVICES/brightness", "w")) == NULL) {
 			printf("kecerahan: Tidak dapat membuka file sedang dalam menulis.\n");
 			return 1;
 		} else {
