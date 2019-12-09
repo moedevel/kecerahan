@@ -2,7 +2,7 @@
 /* silahkan edit 'DEVICES' dan sesuaikan dengan devices yang kalian punya */
 #define TARGET "/sys/class/backlight/DEVICES/brightness"
 
-int cki(char * arr) {
+int char_toint(char * arr) {
         int num = 0;
         char sign;
         short digit, mult = 1, offset = 0;
@@ -20,7 +20,7 @@ int cki(char * arr) {
         return num * mult;
 }
 
-void ikc(int num, char * buf) {
+void int_tochar(int num, char * buf) {
         short digit, offset = 0;
         int save = num, div = 1;
         while (save > 0) {
@@ -38,9 +38,9 @@ void ikc(int num, char * buf) {
         *(buf + offset) = '\0';
 }
 
-int main(int argc, char ** argv) {
+int main(int argc, char *argv[]) {
         if (argc == 2) {
-                FILE * korban;
+                FILE *korban;
                 if (argv[1][0] != '-' && argv[1][0] != '+') {
                         korban = fopen(TARGET, "w");
                         fprintf(korban, "%s", argv[1]);
@@ -50,10 +50,10 @@ int main(int argc, char ** argv) {
                         korban = fopen(TARGET, "r");
                         fscanf(korban, "%s", buff);
                         fclose(korban);
-                        int d = cki(buff);
-                        int step = cki(argv[1]);
+                        int d = char_toint(buff);
+                        int step = char_toint(argv[1]);
                         d += step;
-                        ikc(d, buff);
+                        int_tochar(d, buff);
                         korban = fopen(TARGET, "w");
                         fprintf(korban, "%s", buff);
                         fclose(korban);
