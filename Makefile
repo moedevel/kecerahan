@@ -11,6 +11,10 @@ CC = cc
 build:
 	${CC} ${SRC} -o ${BIN}
 
+test:
+	rm -f main
+	${CC} ${SRC} -o main -Wall -v
+
 clean:
 	rm -f ${BIN}
 

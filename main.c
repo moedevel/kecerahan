@@ -2,17 +2,16 @@
 /* silahkan edit 'DEVICES' dan sesuaikan dengan devices yang kalian punya */
 #define TARGET "/sys/class/backlight/DEVICES/brightness"
 
-int char_toint(char * arr) {
+int char_toint(char *arr) {
         int num = 0;
-        char sign;
         short digit, mult = 1, offset = 0;
-        if ( * arr == '-') {
+        if (*arr == '-') {
                 mult = -1;
                 offset++;
-        } else if ( * arr == '+') {
+        } else if (*arr == '+') {
                 offset++;
         }
-        while ( * (arr + offset) != '\0') {
+        while (*(arr + offset) != '\0') {
                 digit = * (arr + offset) - 48;
                 num = num * 10 + digit;
                 offset++;
@@ -20,7 +19,7 @@ int char_toint(char * arr) {
         return num * mult;
 }
 
-void int_tochar(int num, char * buf) {
+void int_tochar(int num, char *buf) {
         short digit, offset = 0;
         int save = num, div = 1;
         while (save > 0) {
@@ -60,6 +59,7 @@ int main(int argc, char *argv[]) {
                 }
                 return 0;
         } else {
-                return -1;
+                printf("please input a valid number and run as root \n");
+                return 0;
         }
 }
