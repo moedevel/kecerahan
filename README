@@ -5,7 +5,7 @@ kontrol kecerahan layar dengan cli
 
 =========
 #pemasangan
-edit terlebih dahulu file kecerahan.c dan ganti DEVICES pada line 3:
+edit terlebih dahulu file main.c dan ganti DEVICES pada line 3:
 
 # define TARGET "/sys/class/backlight/DEVICES/brightness"
 
