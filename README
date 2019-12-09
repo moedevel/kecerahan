@@ -7,16 +7,16 @@ kontrol kecerahan layar dengan cli
 #pemasangan
 edit terlebih dahulu file kecerahan.c dan ganti DEVICES pada line 3:
 
-#define TARGET "/sys/class/backlight/DEVICES/brightness"
-int cki(char * arr) {
+# define TARGET "/sys/class/backlight/DEVICES/brightness"
 
 lalu ketik:
     $ sudo make clean install
+
 =========
 #penggunaan
     $ sudo kecerahan x     # x = adalah level kecerahan 1-100
+    atau silahkan baca manpages-nya 
 
-catatan: edit terlebih dahulu kecerahan.c
 =========
 Author:
  - iqbal rifai (iqbalrifai@waifu.club)
