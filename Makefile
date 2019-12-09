@@ -1,21 +1,27 @@
-# xbc - Brightness Controller for X
+# Kecerahan - Kontrol kecerahan layar dengan CLI
 # customize below to fit your system
 
-SRC = kecerahan.c
+SRC = main.c
 BIN = kecerahan
 DIR = /usr/bin
+MANPREFIX = /usr/local/share/man/man1
+MANFILES = kecerahan.1
+CC = cc
 
 build:
-	gcc ${SRC} -o ${BIN}
+	${CC} ${SRC} -o ${BIN}
 
 clean:
-	rm ${BIN}
+	rm -f ${BIN}
 
 uninstall:
-	rm ${DIR}/${BIN}
+	rm -f ${DIR}/${BIN} \
+		${MANPREFIX}/${MANFILES}
 
 install: build
-	cp ${BIN} ${DIR}/${BIN}
-	chmod 4767 ${DIR}/${BIN}
+	cp -f ${BIN} ${DIR}/${BIN}
+	chmod 755 ${DIR}/${BIN}
+	cp -f ${MANFILES} ${MANPREFIX}/${MANFILES}
+	chmod 644 ${MANPREFIX}/${MANFILES}
 
 .PHONY: build
