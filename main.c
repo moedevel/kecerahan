@@ -1,6 +1,6 @@
 #include <stdio.h>
 /* silahkan edit 'DEVICES' dan sesuaikan dengan devices yang kalian punya */
-#define TARGET "/sys/class/backlight/radeon_bl0/brightness"
+#define TARGET "/sys/class/backlight/DEVICES/brightness"
 
 int char_toint(char *arr) {
         int num = 0;
