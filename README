@@ -7,6 +7,10 @@ kontrol kecerahan layar dengan cli
 sebelum memulai, pastikan 'tcc' sudah tersedia sebagai compiler-nya,
 jika belum silahkan instal terlebih dahulu di https://bellard.org/tcc/
 atau instal melalui package manager yang sudah tersedia di OS anda.
+=======
+=========
+#pemasangan
+edit terlebih dahulu file main.c dan ganti DEVICES pada line 3:
 
 kemudian, edit terlebih dahulu file kecerahan.c dan ganti DEVICES pada line 3:
 # define TARGET "/sys/class/backlight/DEVICES/brightness"
