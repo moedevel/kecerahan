@@ -4,17 +4,21 @@ kecerahan
 kontrol kecerahan layar dengan cli
 
 =========
-#pemasangan
-edit terlebih dahulu file kecerahan.c dan ganti DEVICES pada line 3:
+#instalasi
+sebelum memulai, pastikan 'tcc' sudah tersedia sebagai compiler-nya,
+jika belum silahkan instal terlebih dahulu di https://bellard.org/tcc/
+atau instal melalui package manager yang sudah tersedia di OS anda.
 
+kemudian, edit terlebih dahulu file kecerahan.c dan ganti DEVICES pada line 3:
 # define TARGET "/sys/class/backlight/DEVICES/brightness"
 
 lalu ketik:
-    $ sudo make clean install
+    # make install
 
 =========
 #penggunaan
-    $ sudo kecerahan x     # x = adalah level kecerahan 1-100
+    # kecerahan x     # x = adalah level kecerahan 1-100, dan pastikan
+    				  # menjalankan program ini sebagai root
     atau silahkan baca manpages-nya 
 
 =========
