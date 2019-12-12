@@ -3,7 +3,6 @@ kecerahan
 
 kontrol kecerahan layar dengan cli
 
-=========
 #instalasi
 sebelum memulai, pastikan 'tcc' sudah tersedia sebagai compiler-nya,
 jika belum silahkan instal terlebih dahulu di https://bellard.org/tcc/
@@ -18,7 +17,7 @@ lalu ketik:
 =========
 #penggunaan
     # kecerahan x     # x = adalah level kecerahan 1-100, dan pastikan
-    				  # menjalankan program ini sebagai root
+                            menjalankan program ini sebagai root
     atau silahkan baca manpages-nya 
 
 =========
