@@ -4,11 +4,9 @@ kecerahan
 kontrol kecerahan layar dengan cli
 
 #instalasi
-sebelum memulai, pastikan 'tcc' sudah tersedia sebagai compiler-nya,
-jika belum silahkan instal terlebih dahulu di https://bellard.org/tcc/
-atau instal melalui package manager yang sudah tersedia di OS anda.
+silahkan clone terlebih dahulu 'git clone git://github.com/owodev/kecerahan.git'
 
-kemudian, edit terlebih dahulu file kecerahan.c dan ganti DEVICES pada line 3:
+kemudian, edit file main.c dan ganti DEVICES pada baris 3:
 # define TARGET "/sys/class/backlight/DEVICES/brightness"
 
 lalu ketik:
