@@ -6,14 +6,14 @@ BIN = kecerahan
 DIR = /usr/bin
 MANPREFIX = /usr/local/share/man/man1
 MANFILES = kecerahan.1
-CC = tcc
+CC = cc
 
 build:
 	${CC} ${SRC} -o ${BIN}
 
 test:
 	rm -f main
-	${CC} -Wall ${SRC} -o main -g -b
+	${CC} -Wall ${SRC} -o main -v
 
 uninstall:
 	rm -f ${DIR}/${BIN} \
