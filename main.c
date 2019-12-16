@@ -4,7 +4,7 @@
 #define ERROR(...) do { fprintf(stderr, __VA_ARGS__); return 2; } while(0)
 
 /* silahkan edit 'DEVICES' dan sesuaikan dengan devices yang kalian punya */
-#define TARGET "/sys/class/backlight/radeon_bl0/brightness"
+#define TARGET "/sys/class/backlight/DEVICES/brightness"
 
 int main(int argc, char **argv) {
 
