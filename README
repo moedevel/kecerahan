@@ -1,23 +1,33 @@
-kecerahan
-==========
+===========
+ kecerahan - kontrol kecerahan layar dengan cli
+===========
 
-kontrol kecerahan layar dengan cli
 
-#instalasi
+=========
+instalasi
+=========
 silahkan clone terlebih dahulu 'git clone git://github.com/owodev/kecerahan.git'
+atau download dari release lalu extract jika selesai.
 
 kemudian, edit file main.c dan ganti DEVICES pada baris 3:
-# define TARGET "/sys/class/backlight/DEVICES/brightness"
+#define TARGET "/sys/class/backlight/DEVICES/brightness"
 
 lalu ketik:
     # make install
 
-=========
-#penggunaan
+
+==========
+penggunaan
+==========
     # kecerahan x     # x = adalah level kecerahan 1-100, dan pastikan
                             menjalankan program ini sebagai root
     atau silahkan baca manpages-nya 
 
-=========
+=======
 Author:
+=======
  - iqbal rifai (iqbalrifai@waifu.club)
+
+===========
+version 1.0
+===========
