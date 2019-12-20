@@ -8,7 +8,7 @@
 
 int main(int argc, char **argv) {
     if(argc != 2)
-        ERROR("[%s] untuk cara penggunaan silahkan baca manpage 'man %s'\n", argv[0], argv[0]);
+        ERROR("[%s] untuk cara penggunaan silahkan baca manpage 'man kecerahan'\n", argv[0]);
 
     FILE *device_file;
     device_file = fopen(DEVICES, "w");
